@@ -1,19 +1,21 @@
-// Roadmap Tooltip Functionality
-const roadmapItems = document.querySelectorAll('.roadmap-item');
-const tooltip = document.getElementById('tooltip');
+document.addEventListener("DOMContentLoaded", () => {
+    const roadmapItems = document.querySelectorAll(".roadmap-item");
 
-roadmapItems.forEach(item => {
-    item.addEventListener('mouseenter', (event) => {
-        const tooltipText = event.currentTarget.getAttribute('data-tooltip');
-        tooltip.textContent = tooltipText;
-        tooltip.style.display = 'block';
+    roadmapItems.forEach(item => {
+        item.addEventListener("mouseenter", (e) => {
+            const tooltip = document.createElement("div");
+            tooltip.classList.add("tooltip");
+            tooltip.textContent = item.getAttribute("data-tooltip");
+            document.body.appendChild(tooltip);
 
-        const rect = event.currentTarget.getBoundingClientRect();
-        tooltip.style.left = `${rect.left + window.scrollX + rect.width / 2 - tooltip.offsetWidth / 2}px`;
-        tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 10}px`;
-    });
+            const rect = e.target.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.clientWidth / 2}px`;
+            tooltip.style.top = `${rect.top - tooltip.clientHeight - 10}px`;
+            tooltip.style.display = "block";
 
-    item.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
+            item.addEventListener("mouseleave", () => {
+                tooltip.remove();
+            });
+        });
     });
 });

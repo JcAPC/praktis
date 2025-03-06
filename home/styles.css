@@ -12,7 +12,7 @@ header {
     background-color: #111; /* Slightly lighter than body for contrast */
     padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Subtle neon glow */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 header h1 {
@@ -49,28 +49,20 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Profile Image */
-.introduction img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(0, 255, 255, 0.8);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
-
-/* Roadmap Styling */
+/* Roadmap Grid using Flexbox */
 .roadmap-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 
 .roadmap-item {
-    width: 200px;
+    flex: 1 1 300px; /* Flexible width, min 300px */
+    max-width: 400px;
     height: 80px;
-    background-color: #222;
+    background-color: #8b0000; /* Dark Red */
     color: white;
     margin: 10px;
     display: flex;
@@ -79,14 +71,14 @@ section {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 0, 255, 0.7);
-    text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    border: 2px solid rgba(139, 0, 0, 0.7);
+    text-shadow: 0 0 8px rgba(139, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5);
 }
 
 .roadmap-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.9);
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.9);
 }
 
 /* Tooltip */
