@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
             tooltip.textContent = item.getAttribute("data-tooltip");
             document.body.appendChild(tooltip);
 
-            // Allow DOM to render tooltip before measuring dimensions
             requestAnimationFrame(() => {
                 const rect = item.getBoundingClientRect();
                 tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;

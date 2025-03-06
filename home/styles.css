@@ -1,8 +1,11 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* General Styling */
 body {
     background-color: #0a0000; /* Very dark red-black */
-    color: #ddd; /* Light gray for contrast */
-    font-family: 'Open Sans', sans-serif;
+    color: #fff; /* White text for better readability */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
 
@@ -12,32 +15,23 @@ body {
     text-shadow: 0 0 10px #ff3333, 0 0 20px #ff0000;
 }
 
-/* Navigation Styling */
-.nav-link {
+/* Navigation Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #ff3333;
+}
+
+.nav-tabs .nav-link {
+    color: #fff;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
     color: #ff3333;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #ff6666;
-}
-
-.nav-link::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ff0000;
-    transition: width 0.3s;
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-    width: 100%;
+    border: 1px solid #ff3333;
+    background: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 /* Roadmap Styling */
@@ -69,7 +63,7 @@ body {
 }
 
 /* Add a Neon Border Around Sections */
-section {
+.tab-content {
     border: 2px solid rgba(255, 0, 0, 0.5);
     padding: 20px;
     border-radius: 15px;
