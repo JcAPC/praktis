@@ -1,4 +1,4 @@
-/* Body Background */
+
 body {
     background: url('images/Image (9).png') no-repeat center center fixed;
     background-size: cover;
@@ -7,7 +7,6 @@ body {
     position: relative;
 }
 
-/* Background Blur Effect */
 body::before {
     content: "";
     position: absolute;
@@ -15,13 +14,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('images/Image (9).png') no-repeat center center fixed;
+    background: url('images/image (9).png') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(10px); /* Apply blur to background */
+    filter: blur(10px); 
     z-index: -1;
 }
 
-/* Dark Overlay for Better Readability */
 body::after {
     content: "";
     position: absolute;
@@ -33,13 +31,11 @@ body::after {
     z-index: -1;
 }
 
-/* Neon Effect */
 .text-neon {
     color: #ff4d4d;
     text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff1a1a;
 }
 
-/* Roadmap Styling */
 .roadmap-item {
     background-color: #222;
     color: white;
@@ -54,7 +50,6 @@ body::after {
     transform: scale(1.1);
 }
 
-/* Tooltip Styling */
 .tooltip {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
@@ -66,7 +61,6 @@ body::after {
     display: none;
 }
 
-/* Navigation Tabs Styling */
 .nav-tabs {
     border: none;
     margin-bottom: 20px;
@@ -87,7 +81,6 @@ body::after {
     color: #ff1a1a;
 }
 
-/* Images in About, Background, Roadmap Sections */
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -102,10 +95,9 @@ body::after {
     }
 }
 
-/* 🔥 Custom List Styling for Driving, Editing, Religious */
 .custom-list {
     display: flex;
-    justify-content: space-between; /* Spreads items to left, center, right */
+    justify-content: space-between; 
     list-style: none;
     padding: 0;
     text-align: center;
@@ -113,7 +105,7 @@ body::after {
 }
 
 .custom-list li {
-    width: 30%; /* Adjust width as needed */
+    width: 30%; 
     font-size: 18px;
 }
 
@@ -125,5 +117,5 @@ body::after {
 
 .custom-list span {
     font-size: 14px;
-    color: #ccc; /* Optional: makes explanation text lighter */
+    color: #ccc; 
 }
