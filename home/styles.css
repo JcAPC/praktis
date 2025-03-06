@@ -1,0 +1,96 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 0 15px #00ffff; /* Blue neon glow */
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.introduction img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.background ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roadmap-container {
+    display: flex;
+    justify-content: center;
+}
+
+.roadmap-item {
+    width: 100px;
+    height: 100px;
+    background-color: #ff00ff;
+    color: white;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    text-shadow: 0 0 5px #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.roadmap-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.roadmap-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.roadmap-item:hover::after {
+    opacity: 1;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
