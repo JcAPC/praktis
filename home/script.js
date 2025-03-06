@@ -1,21 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const roadmapItems = document.querySelectorAll(".roadmap-item");
+    console.log("Portfolio loaded successfully!");
 
-    roadmapItems.forEach(item => {
-        item.addEventListener("mouseenter", (e) => {
-            const tooltip = document.createElement("div");
-            tooltip.classList.add("tooltip");
-            tooltip.textContent = item.getAttribute("data-tooltip");
-            document.body.appendChild(tooltip);
+    const tabs = document.querySelectorAll('.nav-link');
 
-            const rect = e.target.getBoundingClientRect();
-            tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.clientWidth / 2}px`;
-            tooltip.style.top = `${rect.top - tooltip.clientHeight - 10}px`;
-            tooltip.style.display = "block";
-
-            item.addEventListener("mouseleave", () => {
-                tooltip.remove();
-            });
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            console.log(`Switched to tab: ${tab.textContent}`);
         });
     });
 });
